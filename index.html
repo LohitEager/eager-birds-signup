@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eager Birds LMS - Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="left-panel">
+      <img src="mascot-illustration.png" alt="Eager Bird with student" class="illustration" />
+      <p class="tagline">Every learner can fly.</p>
+    </div>
+
+    <div class="right-panel">
+      <div class="logo">
+        <img src="eager-birds-logo.png" alt="Eager Birds Logo" />
+      </div>
+
+      <h1>Sign Up</h1>
+      <p class="subtitle">Create your account and start learning.</p>
+
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Username" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email" required>
+
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Password" required>
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
+        </div>
+
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <p class="login-text">Already have an account? <a href="#">Log in</a></p>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const input = document.getElementById('password');
+      input.type = input.type === 'password' ? 'text' : 'password';
+    }
+  </script>
+</body>
+</html>
