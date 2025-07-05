@@ -17,17 +17,15 @@ document.getElementById("signup-form").addEventListener("submit", function (e) {
 });
 
 // === Dark Mode Toggle Logic ===
-const toggleBtn = document.getElementById("theme-toggle");
+const toggleInput = document.getElementById("theme-toggle");
 const isDark = localStorage.getItem("dark-mode") === "true";
 
 if (isDark) {
   document.body.classList.add("dark");
-  toggleBtn.textContent = "☀️";
+  toggleInput.checked = true;
 }
 
-toggleBtn.addEventListener("click", () => {
+toggleInput.addEventListener("change", () => {
   document.body.classList.toggle("dark");
-  const darkMode = document.body.classList.contains("dark");
-  localStorage.setItem("dark-mode", darkMode);
-  toggleBtn.textContent = darkMode ? "☀️" : "🌙";
+  localStorage.setItem("dark-mode", toggleInput.checked);
 });
