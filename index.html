@@ -9,22 +9,29 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Dark Mode Toggle -->
   <div class="theme-toggle-wrapper">
-  <input type="checkbox" id="theme-toggle" />
-  <label for="theme-toggle" class="slider"></label>
-</div>
+    <input type="checkbox" id="theme-toggle" />
+    <label for="theme-toggle" class="slider"></label>
+  </div>
+
+  <!-- Signup Page -->
   <div class="page-wrapper">
     <div class="signup-container">
+      <!-- Left Visual -->
       <div class="left-visual">
         <img src="mascot-illustration.png" alt="Eager Bird Mascot" class="mascot" />
         <p class="tagline">Every learner can fly. Let’s get you started!</p>
       </div>
 
+      <!-- Right Form -->
       <div class="form-card glass">
         <img src="eager-birds-logo.png" alt="Eager Birds Logo" class="logo" />
         <h1>Sign Up</h1>
         <p class="subtitle">Create your account to start your sky-high learning journey!</p>
+        
         <form id="signup-form">
+          <!-- Username -->
           <div class="input-group">
             <label for="username">Username</label>
             <div class="input-wrapper">
@@ -33,6 +40,7 @@
             </div>
           </div>
 
+          <!-- Email -->
           <div class="input-group">
             <label for="email">Email</label>
             <div class="input-wrapper">
@@ -41,6 +49,7 @@
             </div>
           </div>
 
+          <!-- Password -->
           <div class="input-group">
             <label for="password">Password</label>
             <div class="input-wrapper">
@@ -48,21 +57,26 @@
               <input type="password" id="password" placeholder="Minimum 8 characters" required />
               <span class="toggle-password" onclick="togglePassword()">👁️</span>
             </div>
-            <div id="strength-bar" class="strength-bar"></div>
+            <!-- Password Strength Bar -->
+            <div id="strength-bar" class="strength-bar" data-strength="0"></div>
           </div>
 
+          <!-- Submit -->
           <button type="submit" class="cta-button">Sign Up</button>
         </form>
 
+        <!-- Redirect -->
         <p class="redirect">Already have an account? <a href="#">Log in</a></p>
 
+        <!-- Loader -->
         <div class="loader hidden" id="form-loader">
           <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_usmfx6bp.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
         </div>
       </div>
     </div>
   </div>
- <!-- Floating Animated Bird in Corner -->
+
+  <!-- Floating Bird -->
   <div class="floating-bird-container">
     <lottie-player
       src="eager-bird.json"
@@ -73,6 +87,7 @@
     </lottie-player>
   </div>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="script.js"></script>
 </body>
