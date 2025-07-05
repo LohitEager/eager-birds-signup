@@ -340,6 +340,27 @@ body.dark .input-group label {
 body.dark .subtitle {
   color: #c0c0c0;
 }
+/* === Dark Mode Styling for Left Visual Panel === */
+body.dark .left-visual {
+  background: linear-gradient(to bottom right, #232946, #2e3a59);
+}
+
+body.dark .tagline {
+  color: #f0f0f0;
+}
+/* Optional: Smooth Theme Toggle Transition for Entire Page */
+body {
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.signup-container,
+.form-card,
+.left-visual,
+.input-wrapper,
+.cta-button {
+  transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+}
+
 
 body.dark h1 {
   color: #ffffff;
