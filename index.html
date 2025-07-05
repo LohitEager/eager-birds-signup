@@ -57,14 +57,15 @@
               <input type="password" id="password" placeholder="Minimum 8 characters" required />
               <span class="toggle-password" onclick="togglePassword()">👁️</span>
             </div>
+            <!-- Password Strength Bar -->
             <div id="strength-bar" class="strength-bar" data-strength="0"></div>
           </div>
 
           <!-- Submit -->
           <button type="submit" class="cta-button">
-            <span class="btn-text">Sign Up</span>
-            <span class="btn-spinner"></span>
-          </button>
+  <span class="btn-text">Sign Up</span>
+  <span class="btn-spinner"></span>
+</button>
         </form>
 
         <!-- Redirect -->
@@ -79,7 +80,7 @@
   </div>
 
   <!-- Floating Bird -->
-  <a href="https://eagerbirds.com" target="_blank" class="floating-bird-container">
+  <div class="floating-bird-container">
     <lottie-player
       src="eager-bird.json"
       background="transparent"
@@ -87,7 +88,7 @@
       style="width: 100%; height: 100%;"
       loop autoplay>
     </lottie-player>
-  </a>
+  </div>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
