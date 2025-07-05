@@ -332,3 +332,15 @@ body.dark .redirect a {
 .theme-toggle-wrapper input:checked + .slider::before {
   transform: translateX(24px);
 }
+/* === Fix: Improve Text Visibility in Dark Mode === */
+body.dark .input-group label {
+  color: #e0e0e0;
+}
+
+body.dark .subtitle {
+  color: #c0c0c0;
+}
+
+body.dark h1 {
+  color: #ffffff;
+}
