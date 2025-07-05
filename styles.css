@@ -1,37 +1,49 @@
-/* Reset and base styles */
-body {
+/* Reset and Base */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+body {
   font-family: 'Inter', sans-serif;
-  background: #f2f4ff;
+  background: linear-gradient(to right, #e0f7fa, #e1f5fe);
   color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Page Container */
 .page-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  width: 100%;
 }
 
+/* Signup Layout */
 .signup-container {
   display: flex;
-  background: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   max-width: 1000px;
   width: 90%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
 }
 
-/* Left side visual */
+/* Left Side */
 .left-visual {
-  background: #e5efff;
   flex: 1;
+  background: linear-gradient(to bottom right, #c9eaff, #e1f5fe);
   padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .left-visual img {
@@ -40,21 +52,22 @@ body {
 }
 
 .tagline {
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: 1.4rem;
   text-align: center;
-  color: #4a4a4a;
+  font-weight: 600;
+  color: #333;
 }
 
-/* Right side form */
+/* Right Side Form */
 .form-card {
   flex: 1;
   padding: 50px;
-  background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
 }
 
 .logo {
@@ -64,48 +77,50 @@ body {
 
 h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  font-size: 2.3rem;
+  margin-bottom: 8px;
+  color: #2d2d2d;
 }
 
 .subtitle {
   font-size: 1rem;
-  color: #666;
   margin-bottom: 30px;
+  color: #555;
   text-align: center;
 }
 
+/* Input Groups */
 .input-group {
   width: 100%;
   margin-bottom: 20px;
 }
 
 .input-group label {
-  display: block;
   font-weight: 600;
   margin-bottom: 6px;
+  display: block;
 }
 
 .input-wrapper {
   display: flex;
   align-items: center;
-  background: #f2f2f2;
+  background: #f0f4ff;
   border-radius: 10px;
   padding: 10px 15px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
 }
 
 .input-wrapper input {
+  flex: 1;
   border: none;
   background: transparent;
   outline: none;
-  flex: 1;
   font-size: 1rem;
   padding-left: 10px;
 }
 
 .icon, .toggle-password {
   font-size: 1.2rem;
-  cursor: default;
 }
 
 .toggle-password {
@@ -113,51 +128,69 @@ h1 {
   cursor: pointer;
 }
 
+/* Sign Up Button */
 .cta-button {
-  width: 100%;
-  padding: 12px;
-  background: #4b8df8;
+  background: linear-gradient(to right, #4b8df8, #657eff);
   color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(75, 141, 248, 0.3);
 }
 
 .cta-button:hover {
-  background: #3a78e0;
+  background: linear-gradient(to right, #3a78e0, #566eff);
+  transform: scale(1.02);
 }
 
+/* Social login buttons (placeholder) */
+.social-login {
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+.google-btn, .facebook-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.google-btn {
+  background: white;
+  border: 1px solid #ccc;
+  color: #444;
+}
+.facebook-btn {
+  background: #3b5998;
+  color: white;
+}
+
+/* Loader */
+.loader {
+  margin-top: 20px;
+}
+.hidden {
+  display: none;
+}
+
+/* Redirect text */
 .redirect {
   margin-top: 20px;
   font-size: 0.9rem;
 }
-
 .redirect a {
   color: #4b8df8;
   text-decoration: none;
 }
 
-.loader {
-  margin-top: 20px;
-}
-
-.hidden {
-  display: none;
-}
-
-/* Glassmorphism */
-.glass {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-}
-
-/* Strength bar */
 .strength-bar {
   height: 6px;
   margin-top: 8px;
