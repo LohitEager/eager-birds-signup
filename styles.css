@@ -439,3 +439,42 @@ body.dark h1 {
 body.dark .logo {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7)); /* white glow in dark mode */
 }
+/* === Button Loading Spinner === */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-text {
+  transition: opacity 0.3s ease;
+}
+
+.btn-spinner {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.cta-button.loading .btn-text {
+  opacity: 0.5;
+}
+
+.cta-button.loading .btn-spinner {
+  opacity: 1;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
