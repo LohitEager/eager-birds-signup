@@ -360,6 +360,50 @@ body {
 .cta-button {
   transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
+/* === Fix: Improve Text Visibility in Dark Mode === */
+body.dark .input-group label {
+  color: #e0e0e0;
+}
+
+body.dark .subtitle {
+  color: #c0c0c0;
+}
+
+/* === Dark Mode Styling for Left Visual Panel === */
+body.dark .left-visual {
+  background: linear-gradient(to bottom right, #232946, #2e3a59);
+}
+
+body.dark .tagline {
+  color: #f0f0f0;
+}
+
+/* Optional: Smooth Theme Toggle Transition for Entire Page */
+body {
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.signup-container,
+.form-card,
+.left-visual,
+.input-wrapper,
+.cta-button {
+  transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+}
+
+body.dark h1 {
+  color: #ffffff;
+}
+
+/* ✅ Optional 1: Fix Placeholder Text in Dark Mode */
+body.dark ::placeholder {
+  color: #bdbdbd;
+}
+
+/* ✅ Optional 2: Soft Glow on Toggle Knob */
+.theme-toggle-wrapper .slider::before {
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
 
 
 body.dark h1 {
