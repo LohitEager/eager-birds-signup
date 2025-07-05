@@ -75,12 +75,3 @@ function updateStrengthBar(password) {
   const strength = getPasswordStrength(password);
   strengthBar.setAttribute("data-strength", strength);
 }
-
-// === Floating Bird Click Event ===
-const floatingBird = document.querySelector(".floating-bird-container");
-if (floatingBird) {
-  floatingBird.style.pointerEvents = "auto";
-  floatingBird.addEventListener("click", () => {
-    alert("Tweet! I'm your Eager Bird buddy 🐦✨");
-  });
-}
