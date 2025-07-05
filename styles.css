@@ -242,8 +242,9 @@ body.dark .signup-container {
 }
 
 body.dark .form-card {
-  background: rgba(20, 20, 20, 0.8);
+  background: rgba(40, 40, 55, 0.9);
   border-left: 1px solid #444;
+  color: #f5f5f5;
 }
 
 body.dark .input-wrapper {
@@ -256,8 +257,9 @@ body.dark .cta-button {
   box-shadow: 0 4px 20px rgba(160, 100, 255, 0.3);
 }
 
-body.dark .cta-button:hover {
-  background: linear-gradient(to right, #785eff, #985eff);
+body.dark {
+  background: linear-gradient(to right, #1c1d2a, #2a2b38);
+  color: #f5f5f5;
 }
 
 body.dark .redirect a {
