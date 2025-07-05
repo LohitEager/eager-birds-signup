@@ -75,3 +75,14 @@ function updateStrengthBar(password) {
   const strength = getPasswordStrength(password);
   strengthBar.setAttribute("data-strength", strength);
 }
+// === Floating Bird Click Handler ===
+function handleBirdClick() {
+  const bird = document.getElementById("floating-bird");
+
+  bird.classList.add("bounce-animation");
+
+  setTimeout(() => {
+    bird.classList.remove("bounce-animation");
+    window.open("https://www.eagerbirds.com", "_blank"); // opens in new tab
+  }, 1000); // wait for animation to complete
+}
