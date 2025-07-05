@@ -7,17 +7,30 @@ function togglePassword() {
 // === Form Submission Handler ===
 document.getElementById("signup-form").addEventListener("submit", function (e) {
   e.preventDefault();
-  const button = document.querySelector(".cta-button");
-const loader = document.getElementById("form-loader");
 
-button.classList.add("loading");
-button.disabled = true;
-loader.classList.remove("hidden");
+  const button = document.querySelector(".cta-button");
+  const buttonText = button.querySelector(".btn-text");
+  const spinner = button.querySelector(".btn-spinner");
+  const loader = document.getElementById("form-loader");
+
+  // Start loading animation
+  button.classList.add("loading");
+  button.disabled = true;
+  buttonText.textContent = "Creating...";
+  spinner.style.display = "inline-block";
+  loader.classList.remove("hidden");
 
   // Simulate form processing delay
   setTimeout(() => {
     alert("Account successfully created! 🎉");
+
+    // Reset all UI elements
+    button.classList.remove("loading");
+    button.disabled = false;
+    buttonText.textContent = "Sign Up";
+    spinner.style.display = "none";
     loader.classList.add("hidden");
+
     document.getElementById("signup-form").reset();
     updateStrengthBar(""); // Reset strength bar
   }, 2000);
@@ -46,7 +59,6 @@ passwordInput.addEventListener("input", () => {
   strengthBar.setAttribute("data-strength", strength);
 });
 
-// Strength scale: 0 (empty), 1 (weak), 2 (moderate), 3 (strong)
 function getPasswordStrength(password) {
   if (!password) return 0;
 
@@ -59,7 +71,6 @@ function getPasswordStrength(password) {
   return Math.min(strength, 3);
 }
 
-// Reset strength bar on form clear
 function updateStrengthBar(password) {
   const strength = getPasswordStrength(password);
   strengthBar.setAttribute("data-strength", strength);
