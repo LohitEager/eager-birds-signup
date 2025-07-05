@@ -1,163 +1,197 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #e0f2ff, #ffffff);
   color: #3B3B3B;
 }
 
-.container {
+.page-wrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  flex-wrap: wrap;
+  padding: 2rem;
 }
 
-.left-panel {
+.signup-container {
+  display: flex;
+  background: none;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.left-visual {
   flex: 1;
   background-color: #F4F4FA;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 2rem;
 }
 
-.illustration {
-  max-width: 300px;
+.left-visual .mascot {
+  width: 300px;
   animation: float 4s ease-in-out infinite;
 }
 
-.tagline {
-  font-size: 1.2rem;
+.left-visual .tagline {
+  font-size: 1.3rem;
   margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
 }
 
-.right-panel {
+.form-card {
   flex: 1;
-  padding: 4rem 2rem;
-  max-width: 500px;
-  margin: auto;
+  padding: 3rem 2rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .logo {
   height: 60px;
-  margin-bottom: 2rem;
+  margin: 0 auto 1.5rem;
+  display: block;
 }
 
 h1 {
+  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 
 .subtitle {
-  color: #777;
+  color: #555;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.input-field {
-  padding: 12px;
+.input-group {
   margin-bottom: 1.5rem;
-  border: 1px solid #ccc;
+}
+
+.input-group label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #F4F4FA;
   border-radius: 12px;
-  background-color: #F4F4FA;
-  font-size: 1rem;
-  transition: all 0.2s ease-in;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  transition: border 0.2s ease-in-out;
 }
 
-.input-field:focus {
-  box-shadow: 0 0 5px #4F9CF9;
-  transform: scale(1.02);
-  border-color: #4F9CF9;
+.input-wrapper input {
+  border: none;
+  background: transparent;
   outline: none;
+  flex: 1;
+  font-size: 1rem;
+  padding-left: 10px;
 }
 
-.password-wrapper {
-  position: relative;
-}
-
+.input-wrapper .icon,
 .toggle-password {
-  position: absolute;
-  top: 12px;
-  right: 12px;
+  font-size: 1.2rem;
+  color: #888;
   cursor: pointer;
 }
 
 .strength-bar {
   height: 6px;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(to right, red, yellow, green);
+  width: 100%;
+  margin-top: 0.5rem;
   border-radius: 4px;
-  opacity: 0.3;
+  background: linear-gradient(to right, red, yellow, green);
+  opacity: 0.4;
 }
 
-.button {
-  padding: 12px;
+.cta-button {
   background-color: #4F9CF9;
   color: white;
+  font-size: 1rem;
   font-weight: 600;
+  padding: 12px;
   border: none;
   border-radius: 12px;
-  font-size: 1rem;
+  cursor: pointer;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
-.button:hover {
+.cta-button:hover {
   background-color: #357AE8;
   transform: translateY(-2px);
-  box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
 }
 
-.login-text {
+.redirect {
   margin-top: 1.5rem;
   font-size: 0.95rem;
-  color: #666;
+  text-align: center;
 }
 
-.login-text a {
+.redirect a {
   color: #4F9CF9;
   text-decoration: none;
 }
 
-.login-text a:hover {
+.redirect a:hover {
   text-decoration: underline;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.hidden {
+  display: none !important;
 }
 
 @keyframes float {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
 
 @media (max-width: 768px) {
-  .container {
+  .signup-container {
     flex-direction: column;
   }
 
-  .left-panel {
-    order: 2;
+  .left-visual {
+    padding: 1.5rem;
   }
 
-  .right-panel {
-    order: 1;
-    padding: 2rem 1rem;
+  .left-visual .mascot {
+    width: 220px;
   }
 
-  .illustration {
-    max-width: 220px;
-  }
-
-  .logo {
-    display: block;
-    margin: 0 auto 2rem;
+  .form-card {
+    padding: 2rem 1.5rem;
   }
 }
