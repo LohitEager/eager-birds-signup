@@ -414,6 +414,27 @@ body.dark h1 {
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3)); /* light mode shadow */
   transition: filter 0.3s ease;
 }
+/* === Password Strength Bar Colors === */
+.strength-bar[data-strength="0"] {
+  background: #ddd;
+  width: 100%;
+}
+
+.strength-bar[data-strength="1"] {
+  background: #ff4d4d; /* Red */
+  width: 30%;
+}
+
+.strength-bar[data-strength="2"] {
+  background: #ffc107; /* Amber */
+  width: 60%;
+}
+
+.strength-bar[data-strength="3"] {
+  background: #28a745; /* Green */
+  width: 100%;
+}
+
 
 body.dark .logo {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7)); /* white glow in dark mode */
