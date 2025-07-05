@@ -478,3 +478,19 @@ body.dark .logo {
     transform: rotate(360deg);
   }
 }
+/* === Floating Bird Click Animation === */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+}
+
+.bounce-animation {
+  animation: bounce 1s ease;
+}
