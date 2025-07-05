@@ -4,10 +4,11 @@
   margin: 0;
   padding: 0;
 }
+
 body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(to right, #e0f7fa, #e1f5fe);
-  color: #333;
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(to right, #edf4ff, #f7faff);
+  color: #2b2b2b;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -20,6 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 40px 0;
 }
 
 /* Signup Layout */
@@ -27,18 +29,17 @@ body {
   display: flex;
   max-width: 1000px;
   width: 90%;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  background: #ffffffd0;
   backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
 }
 
-/* Left Side */
+/* Left Visual */
 .left-visual {
   flex: 1;
-  background: linear-gradient(to bottom right, #c9eaff, #e1f5fe);
+  background: linear-gradient(to bottom right, #d0e7ff, #f0f6ff);
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -47,27 +48,26 @@ body {
 }
 
 .left-visual img {
-  max-width: 250px;
+  max-width: 240px;
   margin-bottom: 20px;
 }
 
 .tagline {
-  font-size: 1.4rem;
-  text-align: center;
+  font-size: 1.3rem;
   font-weight: 600;
-  color: #333;
+  text-align: center;
+  color: #2c2c2c;
 }
 
-/* Right Side Form */
+/* Right Form */
 .form-card {
   flex: 1;
-  padding: 50px;
+  padding: 50px 40px;
+  background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  border-left: 1px solid #eaeaea;
 }
 
 .logo {
@@ -76,20 +76,21 @@ body {
 }
 
 h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.3rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 8px;
-  color: #2d2d2d;
+  color: #1e1e1e;
 }
 
 .subtitle {
   font-size: 1rem;
-  margin-bottom: 30px;
   color: #555;
+  margin-bottom: 30px;
   text-align: center;
 }
 
-/* Input Groups */
+/* Input Fields */
 .input-group {
   width: 100%;
   margin-bottom: 20px;
@@ -99,15 +100,21 @@ h1 {
   font-weight: 600;
   margin-bottom: 6px;
   display: block;
+  color: #333;
 }
 
 .input-wrapper {
   display: flex;
   align-items: center;
-  background: #f0f4ff;
-  border-radius: 10px;
-  padding: 10px 15px;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  background: #f1f4ff;
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+}
+
+.input-wrapper:hover {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.06);
 }
 
 .input-wrapper input {
@@ -117,6 +124,7 @@ h1 {
   outline: none;
   font-size: 1rem;
   padding-left: 10px;
+  font-family: 'Outfit', sans-serif;
 }
 
 .icon, .toggle-password {
@@ -130,25 +138,25 @@ h1 {
 
 /* Sign Up Button */
 .cta-button {
-  background: linear-gradient(to right, #4b8df8, #657eff);
+  background: linear-gradient(to right, #5561ff, #6e7bff);
   color: white;
   font-weight: 600;
   font-size: 1rem;
-  padding: 12px;
+  padding: 14px;
   width: 100%;
   border: none;
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(75, 141, 248, 0.3);
+  box-shadow: 0 6px 20px rgba(85, 97, 255, 0.25);
 }
 
 .cta-button:hover {
-  background: linear-gradient(to right, #3a78e0, #566eff);
-  transform: scale(1.02);
+  background: linear-gradient(to right, #4552f0, #5e69f0);
+  transform: translateY(-1px);
 }
 
-/* Social login buttons (placeholder) */
+/* Social login buttons (optional for future) */
 .social-login {
   margin: 20px 0;
   width: 100%;
@@ -181,16 +189,17 @@ h1 {
   display: none;
 }
 
-/* Redirect text */
+/* Redirect */
 .redirect {
   margin-top: 20px;
   font-size: 0.9rem;
 }
 .redirect a {
-  color: #4b8df8;
+  color: #5561ff;
   text-decoration: none;
 }
 
+/* Password Strength */
 .strength-bar {
   height: 6px;
   margin-top: 8px;
@@ -198,7 +207,8 @@ h1 {
   border-radius: 10px;
   overflow: hidden;
 }
-/* Floating Lottie Bird */
+
+/* Floating Bird */
 .floating-bird-container {
   position: fixed;
   bottom: 20px;
