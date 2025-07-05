@@ -7,8 +7,12 @@ function togglePassword() {
 // === Form Submission Handler ===
 document.getElementById("signup-form").addEventListener("submit", function (e) {
   e.preventDefault();
-  const loader = document.getElementById("form-loader");
-  loader.classList.remove("hidden");
+  const button = document.querySelector(".cta-button");
+const loader = document.getElementById("form-loader");
+
+button.classList.add("loading");
+button.disabled = true;
+loader.classList.remove("hidden");
 
   // Simulate form processing delay
   setTimeout(() => {
